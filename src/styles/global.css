@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('/public/fonts/ButlerStencil-UltraLight.woff2') format('woff2'),
+        url('/public/fonts/ButlerStencil-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
