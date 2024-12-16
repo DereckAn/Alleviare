@@ -1,15 +1,23 @@
 ---
-import cerdo from '../assets/cerdo.webp';
+import cerdo from "../assets/cerdo.webp";
 ---
 
-<div class="relative grid [grid-area:stack] grid-rows-[100vh] grid-cols-[100vw] items-center justify-center" style={{
+<div
+  class="relative grid [grid-area:stack] grid-rows-[100vh] grid-cols-[100vw] items-center justify-center"
+  style={{
     backgroundImage: `url(${cerdo.src})`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-}}>
-    <div class=" w-full h-full bg-black/40 col-start-1 row-start-1"/>
-    <main class="col-start-1 row-start-1 text-white text-center font-custom">
-        <h1>Alliviare</h1>
-        <p>Empowering the world to live a healthier life.</p>
-    </main>
+  }}
+>
+  <div class="w-full h-full bg-black/40 col-start-1 row-start-1"></div>
+  <main
+    class="col-start-1 row-start-1 text-white text-center flex flex-col items-center justify-center gap-5"
+  >
+    <p class="text-md uppercase max-w-lg text-center tracking-widest">
+      residencia clínica especializada en cuidados paliativos y manejo del
+      dolor.
+    </p>
+    <h1 class="font-custom2 text-8xl">Alliviare</h1>
+  </main>
 </div>

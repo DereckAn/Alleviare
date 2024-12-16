@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        custom: ["Butler", "montserrat"],
+        montserrat: ["Montserrat", "sans-serif"],
+        custom2: ["Butler2", "montserrat"],
       },
     },
   },
