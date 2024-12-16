@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,9 +15,20 @@ body,
 }
 
 @font-face {
-    font-family: 'Butler2';
-    src: url('/fonts/Butler_Ultra_Light.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Butler2";
+  src: url("/fonts/Butler_Ultra_Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --blueish: 169 18% 76%;
+    --greenish: 186 32% 53%;
+    --purpleish: 230 25% 60%;
+    --pinkish: 287 23% 61%;
+    --pinkish2: 324 26% 80%;
+    --pinkish3: 290 12% 93%;
+  }
 }
