@@ -1,0 +1,124 @@
+---
+// import Logo from "@/components/Logo.astro";
+import menu from "../../config/menu.json";
+---
+
+<header
+  class="header w-full h-16 z-30 fixed top-0 transition-shadow duration-300 flex items-center justify-between border border-red-500"
+>
+  <nav class="navbar container">
+    <div class="flex items-center justify-between">
+      <!-- <Logo /> -->
+      <h2 class="text-2xl font-custom2 ">ALLIVIARE</h2>
+
+      <div class="relative z-40">
+        <button
+          id="nav-toggle"
+          class="cursor-pointer flex items-center border dark:border-light p-1 rounded-md"
+        >
+          <svg class="h-5 fill-current block menu-open" viewBox="0 0 20 20">
+            <title>Menu Open</title>
+            <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+          </svg>
+          <svg class="h-5 fill-current hidden menu-close" viewBox="0 0 20 20">
+            <title>Menu Close</title>
+            <polygon
+              points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+              transform="rotate(45 10 10)"></polygon>
+          </svg>
+        </button>
+
+        <div
+          class="fixed top-0 left-0 h-full bg-black opacity-50 w-full hidden overlay"
+        >
+        </div>
+
+        <div
+          class="fixed top-0 left-0 h-full bg-white dark:bg-darkmode-body overflow-y-auto w-full md:w-96 p-9 sidebar transform -translate-x-full transition-transform"
+        >
+          <div class="flex justify-between items-center mb-14">
+            <!-- <Logo /> -->
+            logo
+
+            <button class="close-sidebar p-2">
+              <svg class="h-5 fill-current block" viewBox="0 0 20 20">
+                <title>Menu Close</title>
+                <polygon
+                  points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+                  transform="rotate(45 10 10)"></polygon>
+              </svg>
+            </button>
+          </div>
+          <ul>
+            {
+              menu.main.map((menuItem) => (
+                <li>
+                  <a
+                    href={menuItem.url}
+                    class="block py-2 text-gray-800 hover:text-primary transition-colors"
+                  >
+                    {menuItem.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  function initializeHeader() {
+    const header = document.querySelector("header");
+    const navToggle = document.querySelector("#nav-toggle");
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.querySelector(".overlay");
+    const closeButton = document.querySelector(".close-sidebar");
+    const menuOpenIcon = document.querySelector(".menu-open");
+    const menuCloseIcon = document.querySelector(".menu-close");
+
+    let showSidebar = false;
+
+    function updateNavbarShadow() {
+      if (window.scrollY > 0) {
+        header?.classList.add("shadow-sm");
+      } else {
+        header?.classList.remove("shadow-sm");
+      }
+    }
+
+    function toggleSidebar() {
+      showSidebar = !showSidebar;
+      if (showSidebar) {
+        sidebar?.classList.remove("-translate-x-full");
+        overlay?.classList.remove("hidden");
+        menuOpenIcon?.classList.add("hidden");
+        menuCloseIcon?.classList.remove("hidden");
+      } else {
+        sidebar?.classList.add("-translate-x-full");
+        overlay?.classList.add("hidden");
+        menuOpenIcon?.classList.remove("hidden");
+        menuCloseIcon?.classList.add("hidden");
+      }
+    }
+
+    // Event Listeners
+    window.addEventListener("scroll", updateNavbarShadow);
+    navToggle?.addEventListener("click", toggleSidebar);
+    overlay?.addEventListener("click", toggleSidebar);
+    closeButton?.addEventListener("click", toggleSidebar);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", updateNavbarShadow);
+      navToggle?.removeEventListener("click", toggleSidebar);
+      overlay?.removeEventListener("click", toggleSidebar);
+      closeButton?.removeEventListener("click", toggleSidebar);
+    };
+  }
+
+  // Initialize when the document is loaded
+  document.addEventListener("astro:page-load", initializeHeader);
+</script>
