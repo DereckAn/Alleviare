@@ -8,7 +8,7 @@ const navItems = [
 ];
 ---
 
-<header class="fixed top-0 w-full z-30 ">
+<header class="fixed top-0 w-full z-30">
   <nav class="bg-gray-800 p-4">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between items-center">
@@ -21,10 +21,7 @@ const navItems = [
         <div class="hidden md:flex space-x-8">
           {
             navItems.map((item) => (
-              <a
-                href={item.url}
-                class="text-gray-300 hover:text-white transition-colors"
-              >
+              <a href={item.url} class="text-gray-300 hover:text-white transition-colors">
                 {item.label}
               </a>
             ))
@@ -36,8 +33,7 @@ const navItems = [
           <button
             id="menuButton"
             class="text-gray-300 hover:text-white focus:outline-none"
-            aria-label="Toggle menu"
-          >
+            aria-label="Toggle menu">
             ☀︎
           </button>
         </div>
@@ -48,10 +44,7 @@ const navItems = [
         <div class="flex flex-col space-y-4">
           {
             navItems.map((item) => (
-              <a
-                href={item.url}
-                class="text-gray-300 hover:text-white transition-colors"
-              >
+              <a href={item.url} class="text-gray-300 hover:text-white transition-colors">
                 {item.label}
               </a>
             ))

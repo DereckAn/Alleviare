@@ -5,30 +5,15 @@
       "url": "/"
     },
     {
-      "name": "Products",
-      "url": "/products"
+      "name": "About Us",
+      "url": "/about"
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "About",
-          "url": "/about"
-        },
-        {
-          "name": "Contact",
-          "url": "/contact"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
-        }
-      ]
+      "name": "Services",
+      "url": "/services"
     },
     {
-      "name": "Contact",
+      "name": "Contact Us",
       "url": "/contact"
     }
   ],
@@ -38,8 +23,8 @@
       "url": "/about"
     },
     {
-      "name": "Products",
-      "url": "/products"
+      "name": "Services",
+      "url": "/services"
     },
     {
       "name": "Contact",

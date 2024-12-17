@@ -1,0 +1,22 @@
+{
+  "bracketSameLine": true,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "htmlWhitespaceSensitivity": "css",
+  "printWidth": 100,
+  "semi": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "plugins": ["prettier-plugin-astro"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro",
+        "singleAttributePerLine": false,
+        "jsxBracketSameLine": true,
+        "htmlSelfClosing": "all"
+      }
+    }
+  ]
+}
