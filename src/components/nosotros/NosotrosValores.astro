@@ -1,0 +1,67 @@
+---
+const values = [
+  {
+    id: 1,
+    title: "Empatía",
+    description: "Ponemos el corazón en cada atención, entendiendo y respetando las emociones y necesidades de nuestros pacientes y sus familias."
+  },
+  {
+    id: 2,
+    title: "Dignidad",
+    description: "Aseguramos que cada paciente reciba un trato respetuoso y humano en todo momento."
+  },
+  {
+    id: 3,
+    title: "Compromiso",
+    description: "Nos dedicamos con pasión y responsabilidad a mejorar la calidad de vida de quienes confían en nosotros."
+  },
+  {
+    id: 4,
+    title: "Trabajo en equipo",
+    description: "Colaboramos como un equipo multidisciplinario para brindar soluciones completas y personalizadas."
+  },
+  {
+    id: 5,
+    title: "Excelencia",
+    description: "Mantenemos altos estándares profesionales en cada aspecto del servicio."
+  },
+  {
+    id: 6,
+    title: "Confianza",
+    description: "Actuamos con transparencia, ética y sensibilidad en cada interacción."
+  },
+  {
+    id: 7,
+    title: "Innovación",
+    description: "Incorporamos prácticas y tecnologías actuales para ofrecer los mejores cuidados y servicios posibles."
+  }
+];
+---
+
+<section class="w-full py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-custom2 text-center mb-16 uppercase tracking-wider">Nuestros Valores</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {values.map(value => (
+        <div class="group p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+          <div class="flex items-center mb-4">
+            <span class="text-4xl font-custom2 text-gray-200 mr-4">{value.id}</span>
+            <h3 class="text-xl font-custom2 uppercase tracking-wide text-gray-900">
+              {value.title}
+            </h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            {value.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .group:hover h3 {
+    @apply transition-colors duration-300;
+  }
+</style>
