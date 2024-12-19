@@ -11,7 +11,7 @@ body,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: var(--pinkish3);
+  /* background: var(--pinkish); */
 }
 
 @font-face {
@@ -29,6 +29,6 @@ body,
     --purpleish: 230 25% 60%;
     --pinkish: 287 23% 61%;
     --pinkish2: 324 26% 80%;
-    --pinkish3: 290 12% 93%;
+    --pinkish3: 290, 12%, 93%
   }
 }
