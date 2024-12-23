@@ -1,20 +1,28 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Inicio",
       "url": "/"
     },
     {
-      "name": "About Us",
-      "url": "/about"
+      "name": "Nosotros",
+      "url": "/nosotros"
     },
     {
-      "name": "Services",
-      "url": "/services"
+      "name": "Servicios",
+      "url": "/servicios"
     },
     {
-      "name": "Contact Us",
-      "url": "/contact"
+      "name": "Cobertura",
+      "url": "/cobertura"
+    },
+    {
+      "name": "Contacto",
+      "url": "/contacto"
+    },
+    {
+      "name": "Conozca más",
+      "url": "/conozca-mas"
     }
   ],
   "footer": [

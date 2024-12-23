@@ -1,0 +1,37 @@
+---
+import DiscoverCard from '@/components/home/DescubreCard.astro';
+import cerdo from "@/assets/cerdo.webp";
+
+const cards = [
+  {
+    title: "Nuestro Cuidado",
+    description: "El equipo es excepcionalmente amable, atento y compasivo. Los residentes son respetados por el equipo que los valora como individuos únicos.",
+    image: cerdo.src,
+    color: "#BCD635"
+  },
+  {
+    title: "Creando Momentos Mágicos",
+    description: "Creemos en vivir la vida al máximo. Por eso nos apasiona apoyar a los residentes a participar en actividades vibrantes y estimulantes.",
+    image: cerdo.src,
+    color: "#E75B99"
+  },
+  {
+    title: "Alimentación y Comedor",
+    description: "Creemos que si comes bien, vives bien. Por eso nos esforzamos al máximo en preparar comidas nutritivas y servirlas en nuestros espaciosos comedores estilo restaurante.",
+    image: cerdo.src,
+    color: "#F5A623"
+  }
+];
+---
+
+<div class="bg-blue-50 p-8">
+  <h2 class="text-3xl md:text-4xl font-custom2 text-center text-gray-800 mb-12">
+    Descubre Más Sobre Nuestros Hogares
+  </h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {cards.map(card => (
+      <DiscoverCard {...card} />
+    ))}
+  </div>
+</div>

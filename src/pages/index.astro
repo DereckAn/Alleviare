@@ -1,10 +1,12 @@
 ---
+import Cuidados from "@/components/home/Cuidados.astro";
+import CuidadosImages from "@/components/home/CuidadosImages.astro";
+import DescubreCasa from "@/components/home/DescubreCasa.astro";
+import Dra from "@/components/home/Dra.astro";
+import Hero from "@/components/home/Hero.astro";
+import Servicios from "@/components/home/Servicios.astro";
 import Conocernos from "../components/Conocernos.astro";
-import Cuidados from "../components/Cuidados.astro";
-import CuidadosImages from "../components/CuidadosImages.astro";
 import Espacios from "../components/Espacios.astro";
-import Hero from "../components/Hero.astro";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -13,9 +15,12 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <Hero />
+  <Dra />
   <Cuidados />
   <CuidadosImages />
+  <Servicios />
   <Espacios />
   <Conocernos />
+  <DescubreCasa />
   <!-- <Welcome /> -->
 </Layout>
