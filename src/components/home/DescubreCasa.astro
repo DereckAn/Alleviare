@@ -1,37 +1,75 @@
 ---
-import DiscoverCard from '@/components/home/DescubreCard.astro';
 import cerdo from "@/assets/cerdo.webp";
+import DiscoverCard from "@/components/home/DescubreCard.astro";
 
-const cards = [
+export interface DescubreCards {
+  title: string;
+  description: string;
+  image: string;
+  color: "pinkish" | "greenish" | "purpleish";
+}
+
+const cards: DescubreCards[] = [
   {
     title: "Nuestro Cuidado",
-    description: "El equipo es excepcionalmente amable, atento y compasivo. Los residentes son respetados por el equipo que los valora como individuos únicos.",
+    description: "El equipo es excepcionalmente amable...",
     image: cerdo.src,
-    color: "#BCD635"
+    color: "pinkish",
   },
   {
     title: "Creando Momentos Mágicos",
-    description: "Creemos en vivir la vida al máximo. Por eso nos apasiona apoyar a los residentes a participar en actividades vibrantes y estimulantes.",
+    description: "Creemos en vivir la vida al máximo...",
     image: cerdo.src,
-    color: "#E75B99"
+    color: "greenish",
   },
   {
     title: "Alimentación y Comedor",
-    description: "Creemos que si comes bien, vives bien. Por eso nos esforzamos al máximo en preparar comidas nutritivas y servirlas en nuestros espaciosos comedores estilo restaurante.",
+    description: "Creemos que si comes bien, vives bien...",
     image: cerdo.src,
-    color: "#F5A623"
-  }
+    color: "purpleish",
+  },
 ];
 ---
 
-<div class="bg-blue-50 p-8">
+<div class="bg-vainilla/50 py-10 relative">
+  <div class="custom-shape-divider-top-1734993347">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none">
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
   <h2 class="text-3xl md:text-4xl font-custom2 text-center text-gray-800 mb-12">
     Descubre Más Sobre Nuestros Hogares
   </h2>
-  
+
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    {cards.map(card => (
-      <DiscoverCard {...card} />
-    ))}
+    {cards.map((card) => <DiscoverCard {...card} />)}
   </div>
 </div>
+
+<style>
+  .custom-shape-divider-top-1734993347 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1734993347 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 39px;
+  }
+
+  .custom-shape-divider-top-1734993347 .shape-fill {
+    fill: hsl(var(--vainillaClaro));
+  }
+</style>

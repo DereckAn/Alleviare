@@ -1,0 +1,36 @@
+---
+// Footer.astro
+import menu from "@/config/menu.json";
+---
+
+<footer class="w-full py-4 px-6 border-t">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <!-- Social Media Icons -->
+    <div class="flex items-center space-x-6">
+      {
+        menu.socialMedia.map((socialItem) => (
+          <a href={socialItem.url} class="text-gray-600 hover:text-gray-800 transition-colors">
+            <i class={`${socialItem.icon} size-8`} />
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul class="flex flex-wrap justify-center items-center gap-6 text-sm uppercase">
+        {
+          menu.main.map((menuItem) => (
+            <li>
+              <a
+                href={menuItem.url}
+                class="block py-2 text-gray-800 hover:text-primary transition-colors">
+                {menuItem.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</footer>

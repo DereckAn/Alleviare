@@ -11,7 +11,7 @@ body,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* background: var(--pinkish); */
+  background-color: hsl(var(--vainillaClaro));
 }
 
 @font-face {
@@ -24,11 +24,11 @@ body,
 
 @layer base {
   :root {
-    --blueish: 169 18% 76%;
-    --greenish: 186 32% 53%;
-    --purpleish: 230 25% 60%;
-    --pinkish: 287 23% 61%;
-    --pinkish2: 324 26% 80%;
-    --pinkish3: 290, 12%, 93%
+    --greenish: 143 39% 78%;
+    --purpleish: 228 31% 58%;
+    --purpleishLight: 228 31% 64%;
+    --vainillaClaro: 30 100% 98%;
+    --vainilla: 26 69% 86%;
+    --pinkish: 334 63% 76%;
   }
 }

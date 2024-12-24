@@ -48,5 +48,22 @@
       "name": "Terms of Service",
       "url": "/terms-services"
     }
+  ],
+  "socialMedia": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com",
+      "icon": "fi fi-brands-instagram"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com",
+      "icon": "fi fi-brands-facebook"
+    },
+    {
+      "name": "Youtube",
+      "url": "https://youtube.com",
+      "icon": "fi fi-brands-youtube"
+    }
   ]
 }
