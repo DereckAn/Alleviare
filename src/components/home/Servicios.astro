@@ -23,7 +23,8 @@ const services = [
 ];
 ---
 
-<section class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+<section
+  class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
   <h2 class="text-6xl mb-12 text-center font-custom2">Nuestros servicios</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,4 +58,8 @@ const services = [
       ))
     }
   </div>
+  <button class="border text-black text-xl px-6 py-2 mt-10 transition duration-300 flex items-center justify-center gap-2 font-custom2 group">
+    VER MAS SERVICIOS
+    <i class="fi fi-ts-angle-small-right group-hover:translate-x-2 transition duration-300 ease-in-out"></i>
+  </button>
 </section>

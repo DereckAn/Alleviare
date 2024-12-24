@@ -32,3 +32,8 @@ body,
     --pinkish: 334 63% 76%;
   }
 }
+
+i {
+    /* @apply mt-1; */
+    margin-top: 0.32rem;
+  }

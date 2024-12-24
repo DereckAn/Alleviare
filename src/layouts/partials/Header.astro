@@ -2,25 +2,28 @@
 import menu from "../../config/menu.json";
 ---
 
-<header
-  class="header w-full h-16 z-30 fixed top-0 duration-300 flex items-center justify-between bg-black/35">
+<header class="header w-full h-16 z-30 fixed top-0 duration-300 flex items-center justify-between">
   <nav class="navbar container">
     <div class="flex items-center justify-between">
-      <h2 class="logo text-2xl font-custom2 ml-32 text-white">ALLIVIARE</h2>
+      <h2 class="logo text-2xl font-custom2 ml-32 text-white px-4 py-2 bg-black/35">ALLIVIARE</h2>
 
-      <div class="relative z-40 ">
+      <div class="relative z-40">
         <button
           id="nav-toggle"
-          class="cursor-pointer size-10 flex items-center mix-blend-difference p-1 rounded-md relative group">
-          <span class="bg-white absolute h-0.5 w-7 transition-all duration-700 ease-in-out top-[25%] group-hover:top-[75%]"/>
-          <span class="bg-white absolute h-0.5 w-7 transition-all duration-700 ease-in-out"/>
-          <span class="bg-white absolute h-0.5 w-7 transition-all duration-700 ease-in-out bottom-[25%] group-hover:bottom-[75%]"/>
+          class="cursor-pointer size-10 flex items-center justify-center mix-blend-difference p-1 relative group bg-black/35">
+          <span
+            class="bg-white absolute h-0.5 w-7 transition-all duration-700 ease-in-out top-[25%] group-hover:top-[75%]"
+          ></span>
+          <span class="bg-white absolute h-0.5 w-7 transition-all duration-700 ease-in-out"></span>
+          <span
+            class="bg-white absolute h-0.5 w-7 transition-all duration-700 ease-in-out bottom-[25%] group-hover:bottom-[75%]"
+          ></span>
         </button>
 
-        <div class="fixed top-0 left-0 h-full bg-black opacity-50 w-full hidden overlay"></div>
+        <div class="fixed top-0 right-0 h-full bg-black opacity-50 w-full hidden overlay"></div>
 
         <div
-          class="fixed top-0 left-0 h-full bg-white dark:bg-darkmode-body overflow-y-auto w-full md:w-96 p-9 sidebar transform -translate-x-full transition-transform">
+          class="fixed top-0 right-0 h-full bg-white dark:bg-darkmode-body overflow-y-auto w-full md:w-96 p-16 sidebar transform translate-x-full transition-transform">
           <div class="flex justify-between items-center mb-14">
             <h2 class="text-2xl font-custom2">ALLIVIARE</h2>
 
@@ -33,13 +36,13 @@ import menu from "../../config/menu.json";
               </svg>
             </button>
           </div>
-          <ul>
+          <ul class="divide-y divide-gray-200">
             {
               menu.main.map((menuItem) => (
-                <li>
+                <li class="">
                   <a
                     href={menuItem.url}
-                    class="block py-2 text-gray-800 hover:text-primary transition-colors">
+                    class="block py-7 hover:text-gray-300 transition-colors text-xl font-custom2">
                     {menuItem.name}
                   </a>
                 </li>
@@ -54,7 +57,6 @@ import menu from "../../config/menu.json";
 
 <script>
   function initializeHeader() {
-    const header = document.querySelector("header");
     const navToggle = document.querySelector("#nav-toggle");
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.querySelector(".overlay");
@@ -64,23 +66,15 @@ import menu from "../../config/menu.json";
 
     let showSidebar = false;
 
-    function updateNavbarShadow() {
-      if (window.scrollY > 0) {
-        header?.classList.add("shadow-sm");
-      } else {
-        header?.classList.remove("shadow-sm");
-      }
-    }
-
     function toggleSidebar() {
       showSidebar = !showSidebar;
       if (showSidebar) {
-        sidebar?.classList.remove("-translate-x-full");
+        sidebar?.classList.remove("translate-x-full");
         overlay?.classList.remove("hidden");
         menuOpenIcon?.classList.add("hidden");
         menuCloseIcon?.classList.remove("hidden");
       } else {
-        sidebar?.classList.add("-translate-x-full");
+        sidebar?.classList.add("translate-x-full");
         overlay?.classList.add("hidden");
         menuOpenIcon?.classList.remove("hidden");
         menuCloseIcon?.classList.add("hidden");
@@ -88,14 +82,12 @@ import menu from "../../config/menu.json";
     }
 
     // Event Listeners
-    window.addEventListener("scroll", updateNavbarShadow);
     navToggle?.addEventListener("click", toggleSidebar);
     overlay?.addEventListener("click", toggleSidebar);
     closeButton?.addEventListener("click", toggleSidebar);
 
     // Cleanup function
     return () => {
-      window.removeEventListener("scroll", updateNavbarShadow);
       navToggle?.removeEventListener("click", toggleSidebar);
       overlay?.removeEventListener("click", toggleSidebar);
       closeButton?.removeEventListener("click", toggleSidebar);

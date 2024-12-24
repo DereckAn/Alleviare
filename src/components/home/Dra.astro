@@ -2,9 +2,20 @@
 import dra from "@/assets/images/Dra.webp";
 ---
 
-<section class="flex w-full items-center justify-center md:py-10">
-  <div class="flex flex-col items-center justify-center gap-5">
-    <img src={dra.src} alt="Dra." class="rounded-full w-64 h-64 object-cover object-top" />
-    <h2 class="max-w-96">Dra. Gabriela López Especialista en Medicina del Dolor & Cuidados Paliativos</h2>
+<section class="flex w-full items-center justify-center md:py-16">
+  <div class="flex flex-col items-center justify-center gap-8">
+    <img 
+      src={dra.src} 
+      alt="Dra." 
+      class="rounded-full w-64 h-64 object-cover object-top shadow-lg hover:scale-105 transition-transform duration-300" 
+    />
+    <div class="text-center space-y-2">
+      <h2 class="font-custom2 text-3xl tracking-wide">
+        Dra. Gabriela López
+      </h2>
+      <p class="text-gray-600 text-lg font-light tracking-wider max-w-md">
+        Especialista en Medicina del Dolor & Cuidados Paliativos
+      </p>
+    </div>
   </div>
 </section>
