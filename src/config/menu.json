@@ -23,6 +23,10 @@
     {
       "name": "Conozca más",
       "url": "/conozca-mas"
+    },
+    {
+      "name": "Testimonios",
+      "url": "/testimonios"
     }
   ],
   "footer": [
