@@ -1,0 +1,49 @@
+---
+import cerdo2 from "public/images/cerdo2.webp";
+import ComponentWrapper from "../ComponentWrapper.astro";
+---
+
+<ComponentWrapper className="container mx-auto px-4 overflow-hidden">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+    {/* Columna de imagen */}
+    <div class="w-full transform transition-all duration-700 hover:scale-105">
+      <div class="relative overflow-hidden shadow-xl">
+        <img
+          src={cerdo2.src}
+          alt="Doctora en instalaciones médicas"
+          class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+        />
+        {/* Overlay sutil */}
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+        </div>
+      </div>
+    </div>
+
+    {/* Columna de contenido */}
+    <div class="flex flex-col space-y-8 md:pl-8 text-center">
+      <div class="space-y-3">
+        <h1
+          class="font-custom2 text-4xl md:text-5xl lg:text-6xl font-normal tracking-wide text-gray-900 transform transition-all duration-700 hover:translate-x-2">
+          ALLIVIARE
+        </h1>
+        <h2 class="text-sm uppercase tracking-[0.2em] text-gray-600">NUESTRA HISTORIA</h2>
+      </div>
+
+      <blockquote
+        class="text-xl md:text-xl leading-relaxed text-gray-800 md:border-x-4 md:border-gray-300 px-6">
+        Nuestro proyecto nació de la necesidad de llenar ese hueco entre el hospital y la casa, para
+        los cuidados clínicos paliativos de nuestros seres queridos.
+      </blockquote>
+
+      <p class="text-gray-600 italic font-light">- Dra Tania Torres</p>
+
+      <a
+        href="#conocenos"
+        class="group inline-flex items-center justify-center space-x-2 uppercase tracking-wider text-sm text-gray-800 hover:text-gray-600 transition-colors duration-300">
+        <span>Conócenos</span>
+        <span class="transform transition-transform duration-300 group-hover:translate-x-1">›</span>
+      </a>
+    </div>
+  </div>
+</ComponentWrapper>

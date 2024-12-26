@@ -3,11 +3,26 @@ import cerdo from "@/assets/cerdo.webp";
 ---
 
 <section
-  class="relative grid [&>*]:col-start-1 [&>*]:row-start-1 items-center h-[40vh] w-full"
+  class="relative h-[50vh] max-h-[630px] w-full"
   style={{
     backgroundImage: `url(${cerdo.src})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
   }}>
+  <div class="bg-purpleish h-[30vh] absolute w-[800px] top-1/2 left-1/2 text-center flex flex-col items-center justify-center transform -translate-x-1/2 ">
+    <h2 class="font-custom2 text-5xl">Estamos listos para conocerles</h2>
+    <p class="text-md mt-4 max-w-[600px]">
+      Agendemos un recorrido para que pueda conocer de primera mano lo que CASA PACIFICA ofrece. Un
+      refugio de tranquilidad, cuidados médicos profesionales y un entorno diseñado con sus
+      necesiades en mente.
+    </p>
+    <button
+      class="border text-white text-xl px-6 py-2 mt-10 transition duration-300 flex items-center justify-center gap-2 font-custom2 group">
+      VER INSTALACIONES
+      <i
+        class="fi fi-ts-angle-small-right group-hover:translate-x-2 transition duration-300 ease-in-out"
+      ></i>
+    </button>
+  </div>
 </section>

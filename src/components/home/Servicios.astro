@@ -1,5 +1,8 @@
 ---
 import cerdo from "@/assets/cerdo.webp";
+import logo from "../../../public/favicon.svg";
+import ComponentWrapper from "../ComponentWrapper.astro";
+
 const services = [
   {
     title: "Cuidado especializado",
@@ -23,43 +26,37 @@ const services = [
 ];
 ---
 
-<section
-  class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
-  <h2 class="text-6xl mb-12 text-center font-custom2">Nuestros servicios</h2>
+<ComponentWrapper>
+  <section
+    class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <h2 class="text-6xl mb-12 text-center font-custom2">Nuestros servicios</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {
-      services.map((service) => (
-        <div class="bg-white shadow-lg overflow-hidden group md:hover:scale-105 transition duration-300 ease-in-out">
-          <img src={service.image} alt={service.title} class="w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-            <ul class="space-y-2">
-              {service.features.map((feature) => (
-                <li class="flex items-center text-gray-600">
-                  <svg
-                    class="w-5 h-5 mr-2 text-green-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {feature}
-                </li>
-              ))}
-            </ul>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        services.map((service) => (
+          <div class="bg-white shadow-lg overflow-hidden group md:hover:scale-105 transition duration-300 ease-in-out">
+            <img src={service.image} alt={service.title} class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+              <ul class="space-y-2">
+                {service.features.map((feature) => (
+                  <li class="flex items-center text-gray-600">
+                    <img src={logo.src} alt={feature} class="w-4 h-4 mr-2" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      ))
-    }
-  </div>
-  <button class="border text-black text-xl px-6 py-2 mt-10 transition duration-300 flex items-center justify-center gap-2 font-custom2 group">
-    VER MAS SERVICIOS
-    <i class="fi fi-ts-angle-small-right group-hover:translate-x-2 transition duration-300 ease-in-out"></i>
-  </button>
-</section>
+        ))
+      }
+    </div>
+    <button
+      class="border text-black text-xl px-6 py-2 mt-10 transition duration-300 flex items-center justify-center gap-2 font-custom2 group">
+      VER MAS SERVICIOS
+      <i
+        class="fi fi-ts-angle-small-right group-hover:translate-x-2 transition duration-300 ease-in-out"
+      ></i>
+    </button>
+  </section>
+</ComponentWrapper>
