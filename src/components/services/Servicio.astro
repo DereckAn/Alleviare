@@ -3,26 +3,23 @@
 import cerdo2 from "../../../public/images/cerdo2.webp";
 ---
 
-<div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 gap-8">
-  <div class="w-full md:w-1/2">
-    <img src={cerdo2.src} alt="Clinical Room" class="w-[300px] h-[500px] shadow-lg object-cover" />
-  </div>
-
-  <div class="w-full md:w-1/2 space-y-6">   
-    <h2 class="text-4xl font-serif text-gray-800">Residencia Clínica</h2>
-
-    <p class="text-xl text-gray-700">Desde una noche hasta las que necesites.</p>
-
+<div
+  class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 gap-8 my-64">
+  <div class="w-full md:w-1/2 space-y-6">
+    <h2 class="text-5xl text-gray-800 font-custom2">Residencia Clínica</h2>
+    <p class="text-xl text-gray-700 font-custom2 font-semibold">Desde una noche hasta las que necesites.</p>
     <p class="text-gray-600 leading-relaxed">
       En Casa Pacifica, contamos con 4 tipos de residencias, desde habitaciones hasta suites con 2
       recámaras y cocineta. En ellas disfrutarás de apoyo de enfermería 24 hrs, visita médica diaria
       y más. Visítenos para conocer nuestras instalaciones.
     </p>
-
     <button
       class="border border-gray-800 text-gray-800 px-6 py-2 uppercase text-sm tracking-wider hover:bg-gray-800 hover:text-white transition-colors">
       Más información
     </button>
+  </div>
+  <div class="w-full md:w-1/2 overflow-hidden h-[50vh]">
+    <img src={cerdo2.src} alt="Clinical Room" class="w-full shadow-lg object-cover" />
   </div>
 </div>
 
