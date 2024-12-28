@@ -1,7 +1,63 @@
 ---
-
+import cerdo from "@/assets/cerdo.webp";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<div>
-    ContactUs
-</div>  
+<Layout title="Contacto">
+  <div
+    class="relative w-full min-h-screen flex justify-center items-center py-16"
+    style={{
+      backgroundImage: `url(${cerdo.src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed",
+    }}>
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <div
+      class="absolute left-1/2 w-full max-w-lg mx-4 bg-white/95 shadow-2xl backdrop-blur-sm p-8 border border-gray-100">
+      <div class="flex flex-col items-center gap-6">
+        <h2 class="text-4xl md:text-5xl font-custom2 text-gray-800">Contáctanos</h2>
+
+        <p class="text-gray-600 text-center leading-relaxed">
+          Queremos ser apoyo para usted y los suyos en estos momentos. Si necesita más información
+          sobre cómo podemos ayudarle, comuníquese con nosotros por cualquiera de estos medios.
+        </p>
+
+        <div class="w-full space-y-6 mt-4">
+          <div class="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors">
+            <i class="fi fi-ss-phone-flip text-xl"></i>
+            <a href="tel:+523344801259" class="hover:underline">+52 334 480 1259</a>
+          </div>
+
+          <div class="flex items-center gap-3 text-gray-700 hover:text-pink-600 transition-colors">
+            <i class="fi fi-brands-instagram text-xl"></i>
+            <a
+              href="https://www.instagram.com/alliviare"
+              target="_blank"
+              class="hover:underline truncate">
+              @alliviare
+            </a>
+          </div>
+
+          <div class="flex items-start gap-3 text-gray-700">
+            <i class="fi fi-ss-marker text-xl mt-1"></i>
+            <div>
+              <p>Paseo de Las Nubes 10</p>
+              <p>Fraccionamiento Los Ángeles</p>
+              <p>Hermosillo, Sonora, México 83106</p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-gray-200">
+            <a
+              href="https://api.whatsapp.com/send?phone=+523344801259"
+              class="w-full bg-pinkish/80 hover:bg-pinkish text-white font-medium py-2 px-6 transition-colors flex items-center justify-center gap-3">
+              <i class="fi fi-brands-whatsapp text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
