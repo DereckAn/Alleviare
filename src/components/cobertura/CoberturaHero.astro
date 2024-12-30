@@ -1,0 +1,26 @@
+---
+import cerdo from "@/assets/cerdo.webp";
+---
+
+<div
+  class="relative w-full max-w-[1800px] max-h-[1930px] mx-auto px-8 flex flex-col items-start pt-24">
+  <div class="relative w-full xl:pl-20">
+    <img src={cerdo.src} alt="Imagen Principal" class="w-[80%] h-auto relative bg-gray-100" />
+  </div>
+  <div class="w-full h-[50vh] flex justify-end xl:px-20">
+    <div class="flex flex-col w-full justify-center gap-4">
+      <h1 class="text-6xl font-custom2">COBERTURA</h1>
+      <hr class="w-full border border-gray-700" />
+      <p class="text-2xl font-custom2 text-gray-700">¿Qué es?</p>
+      <p class="text-gray-700 max-w-md">
+        La cobertura es un servicio que nos permite asistir a nuestros residentes en casa, con el
+        fin de que puedan disfrutar de la atención médica que nos brinda.
+      </p>
+    </div>
+    <img
+      src={cerdo.src}
+      alt="Imagen Secundaria"
+      class="md:w-[500px] xl:max-w-[700px] xl:w-[50%] object-cover -translate-y-40 border-[20px] border-[#fffaf5]"
+    />
+  </div>
+</div>
