@@ -1,0 +1,44 @@
+---
+import cerdo from "@/assets/cerdo.webp";
+import logo from "../../public/favicon.svg";
+import Layout from "../layouts/Layout.astro";
+const lista = [
+  "CONSULTA ESPECIALIZADA",
+  "URGENCIAS PALIATIVAS",
+  "ATENCION A LA SALUD",
+  "CIRUGÍA AMBULATORIA",
+  "RESIDENCIA CLÍNICA",
+];
+---
+
+<Layout>
+  <section class="relative md:h-full md:max-h-[800px] flex flex-col">
+    <img src={cerdo.src} alt="Cerdo" class="h-[50vh] md:h-[70vh] w-full object-cover" />
+    <div
+      class="md:absolute bg-white w-full h-auto md:h-full
+      max-w-full md:max-w-[600px] md:max-h-[700px]
+      md:top-28 md:left-10
+      px-6 md:px-20 py-8 md:py-10
+      space-y-3 md:space-y-5 flex flex-col justify-center">
+      <h1 class="text-3xl md:text-5xl font-custom2">Tenemos lo que necesita.</h1>
+      <p class="text-sm md:text-base text-gray-400">
+        Cuidamos de usted y de los suyos con un equipo profesional altamente capacitado para:
+      </p>
+      {
+        lista.map((item) => (
+          <p class="flex gap-2 border-b border-gray-400 py-2 md:py-3 tracking-wider w-full md:w-5/6 text-xs md:text-sm">
+            <img src={logo.src} alt="logo flor" class="size-4 md:size-5" />
+            {item}
+          </p>
+        ))
+      }
+      <div
+        class="border border-greenish text-greenish w-fit
+        px-6 md:px-10 py-2 md:py-4 leading-tight
+        text-xs md:text-sm hover:bg-greenish hover:text-white
+        transition-colors cursor-pointer duration-300">
+        Explora nuestros servicios
+      </div>
+    </div>
+  </section>
+</Layout>

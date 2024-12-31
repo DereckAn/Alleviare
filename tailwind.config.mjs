@@ -17,7 +17,7 @@ export default {
           DEFAULT: "hsl(var(--pinkish))",
         },
         vainillaClaro: {
-          DEFAULT: "hsl(var(--vainilla))",
+          DEFAULT: "hsl(var(--vainillaClaro))",
         },
         vainilla: {
           DEFAULT: "hsl(var(--vainilla))",
