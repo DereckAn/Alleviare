@@ -1,0 +1,28 @@
+---
+import cerdo from "@/assets/cerdo.webp";
+---
+
+<section class="grid md:grid-cols-2 place-items-center relative w-full py-20 gap-5 md:gap-0">
+  <div
+    class="flex flex-0 flex-col basis-0 md:basis-1/2 max-w-[500px] items-center justify-center gap-3">
+    <h2 class="text-center font-custom2 text-6xl">Built by pattern geeks</h2>
+    <p class="text-center text-gray-400">
+      We aim to build simple design tools that energize your creativity. Tabbied was initially
+      developed as a tool for making wall art, but we quickly realized that it could be used for
+      many other purposes. We're very excited to see what you can make using out platform. We also
+      like to give a special thanks to Chuan Yuan. He is the creator of CSS-Doodle, a web component
+      we use to draw our patterns. Thanks to all the supporters of both CSS-Doodle and Tabbied. You
+      are inspiring us to keep on making.
+    </p>
+    <div
+      class="w-fit px-10 py-2 border border-purpleishLight text-purpleishLight hover:bg-purpleishLight hover:text-white transition-colors duration-300 ease-in-out">
+      Conozca mas
+    </div>
+  </div>
+
+  <!-- div con imagenes -->
+  <div class="flex basis-0 md:basis-1/2 justify-center gap-10">
+    <img src={cerdo.src} alt="" class="w-[40%] h-[40vh] object-cover md:translate-y-20" />
+    <img src={cerdo.src} alt="" class="w-[40%] h-[40vh] object-cover md:-translate-y-20" />
+  </div>
+</section>
